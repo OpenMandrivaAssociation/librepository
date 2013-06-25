@@ -1,0 +1,46 @@
+Index: build.properties
+===================================================================
+--- build.properties
++++ build.properties	2012-01-21 03:48:14.904813832 +0100
+@@ -1,7 +1,11 @@
+-project.revision=1.1-SNAPSHOT
++project.revision=1.1.6
+ ivy.artifact.group=pentaho-library
+ ivy.artifact.id=librepository
+ impl.title=LibRepository
+ impl.productID=librepository
+ src.dir=${basedir}/source
+ dependency.libbase.revision=1.1.6
++
++antcontrib.available=true
++build.cache.dir=lib
++
+Index: common_build.xml
+===================================================================
+--- common_build.xml
++++ common_build.xml	2012-01-21 03:52:47.246409091 +0100
+@@ -1071,6 +1071,7 @@
+         <path refid="classpath" />
+       </classpath>
+       <src path="${src.dir}" />
++      <exclude name="org/pentaho/reporting/libraries/repository/email/**"/>
+     </javac>
+   </target>
+ 
+@@ -1356,6 +1357,9 @@
+              doctitle="${impl.title} documentation">
+       <link href="http://java.sun.com/j2se/${javac.source}.0/docs/api/" />
+       <classpath refid="classpath" />
++      <packageset dir="source">
++        <exclude name="org/pentaho/reporting/libraries/repository/email/**"/>
++      </packageset>
+     </javadoc>
+   </target>
+ 
+@@ -1648,4 +1652,4 @@
+     </dot-classpath>
+   </target>
+ 
+-</project>
+\ No newline at end of file
++</project>
