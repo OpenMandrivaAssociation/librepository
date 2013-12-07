@@ -1,7 +1,7 @@
 Summary:	Hierarchical repository abstraction layer
 Name:		librepository
 Version:	1.1.6
-Release:	1
+Release:	2
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://reporting.pentaho.org/
