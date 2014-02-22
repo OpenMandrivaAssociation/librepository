@@ -1,24 +1,18 @@
-Index: build.properties
-===================================================================
---- build.properties
-+++ build.properties	2012-01-21 03:48:14.904813832 +0100
-@@ -1,7 +1,11 @@
--project.revision=1.1-SNAPSHOT
-+project.revision=1.1.6
+--- librepository-1.1.3/build.properties	2009-11-17 16:41:36.000000000 +0000
++++ librepository-1.1.3/build.properties	2009-11-17 16:41:56.000000000 +0000
+@@ -1,7 +1,9 @@
+-project.revision=TRUNK-SNAPSHOT
++project.revision=1.1.3
  ivy.artifact.group=pentaho-library
  ivy.artifact.id=librepository
  impl.title=LibRepository
  impl.productID=librepository
  src.dir=${basedir}/source
- dependency.libbase.revision=1.1.6
-+
+ dependency.libbase.revision=1.1.3
 +antcontrib.available=true
 +build.cache.dir=lib
-+
-Index: common_build.xml
-===================================================================
---- common_build.xml
-+++ common_build.xml	2012-01-21 03:52:47.246409091 +0100
+--- librepository-1.1.3/common_build.xml	2009-11-17 20:34:29.000000000 +0000
++++ librepository-1.1.3/common_build.xml	2009-11-17 20:36:51.000000000 +0000
 @@ -1071,6 +1071,7 @@
          <path refid="classpath" />
        </classpath>
@@ -42,5 +36,5 @@ Index: common_build.xml
    </target>
  
 -</project>
-\ No newline at end of file
+\ No hay ningún carácter de nueva línea al final del fichero
 +</project>
