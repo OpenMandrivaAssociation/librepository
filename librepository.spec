@@ -4,8 +4,8 @@
 Epoch: 1
 %endif
 Name: librepository
-Version: 1.1.3
-Release: 9.0%{?dist}
+Version: 1.1.6
+Release: 1%{?dist}
 Summary: Hierarchical repository abstraction layer
 License: LGPLv2
 
@@ -37,7 +37,7 @@ Javadoc for %{name}.
 
 %prep
 %setup -q -c
-%patch0 -p1 -b .build
+%patch -P0 -p1 -b .build
 find . -name "*.jar" -exec rm -f {} \;
 mkdir -p lib
 build-jar-repository -s -p lib commons-logging-api libbase
